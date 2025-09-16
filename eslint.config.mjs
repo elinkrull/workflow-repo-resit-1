@@ -1,9 +1,13 @@
+import js from "@eslint/js";
+import globals from "globals";
+
 /** @type {import('eslint').Linter.Config[]} */
 export default [
   {
     languageOptions: {
       globals: {
         ...globals.browser,
+        ...globals.node,
         describe: true, // Used for grouping tests
         test: true, // Used to create tests
         it: true, // Alternative way to create tests
@@ -13,6 +17,10 @@ export default [
         process: true, // Used for environment variables later
       },
     },
+    rules: {
+      "no-console": ["warn", { allow: ["warn", "error"] }],
+      "no-unused-vars": ["warn", { argsIgnorePattern: "^_", varsIgnorePattern: "^_" }],
+    },
   },
-  pluginJs.configs.recommended,
+  js.configs.recommended,
 ];
