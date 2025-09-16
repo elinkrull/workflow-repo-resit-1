@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "npx tailwindcss -i ./css/input.css -o ./css/style.css --watch",
     "prepare": "husky",
-    "lint": "eslint . --ext .js"
+    "lint": "eslint . --ext .js",
+    "test": "vitest"
   },
   "keywords": [],
   "author": "",
