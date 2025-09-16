@@ -4,11 +4,8 @@
  * @param {number} cookTimeMinutes - Cooking time in minutes
  * @returns {number} - Total cooking time in minutes
  */
-function calculateTotalCookingTime(prepTimeMinutes, cookTimeMinutes) {
-  if (
-    typeof prepTimeMinutes !== "number" ||
-    typeof cookTimeMinutes !== "number"
-  ) {
+export function calculateTotalCookingTime(prepTimeMinutes, cookTimeMinutes) {
+  if (typeof prepTimeMinutes !== "number" || typeof cookTimeMinutes !== "number") {
     return 0;
   }
 
