@@ -14,7 +14,7 @@ test.describe("Forgot Password", () => {
     await page.goto("http://127.0.0.1:5500/forgot-password");
 
     await page.getByRole("textbox", { name: /email/i }).fill("workflow@noroff.no");
-    await page.getByRole("button", { name: /send|reset|submit/i }).click();
+    await page.getByRole("button", { name: /reset password/i }).click();
     await expect(
       page.getByText(/Password reset instructions have been sent to your email./i),
     ).toBeVisible();
