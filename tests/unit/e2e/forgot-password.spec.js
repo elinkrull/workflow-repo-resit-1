@@ -1,10 +1,22 @@
 import { test, expect } from "@playwright/test";
 
 // Testing clicks on the "Forgot Password?" link
-test.describe("Forgot Password navigation link", () => {
-  test("clicks the Forgot Password link on the login page", async ({ page }) => {
+test.describe("Forgot Password", () => {
+  test("clicks the Forgot Password link and navigates to the Forgot Password page", async ({
+    page,
+  }) => {
     await page.goto("http://127.0.0.1:5500/login");
     await page.click("text=Forgot Password?");
     await expect(page).toHaveURL(/\/forgot-password/);
+  });
+
+  test("shows success message when submitting a valid email", async ({ page }) => {
+    await page.goto("http://127.0.0.1:5500/forgot-password");
+
+    await page.getByRole("textbox", { name: /email/i }).fill("workflow@noroff.no");
+    await page.getByRole("button", { name: /send|reset|submit/i }).click();
+    await expect(
+      page.getByText(/Password reset instructions have been sent to your email./i),
+    ).toBeVisible();
   });
 });
