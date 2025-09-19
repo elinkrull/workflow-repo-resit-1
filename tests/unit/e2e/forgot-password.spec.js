@@ -19,4 +19,14 @@ test.describe("Forgot Password", () => {
       page.getByText(/Password reset instructions have been sent to your email./i),
     ).toBeVisible();
   });
+
+  test("shows error message when submitting an unknown email", async ({ page }) => {
+    await page.goto("http://127.0.0.1:5500/forgot-password");
+
+    await page.getByRole("textbox", { name: /email/i }).fill("");
+    await page.getByRole("textbox", { name: /email/i }).fill("nonexistent@noroff.no");
+    await page.getByRole("button", { name: /reset password/i }).click();
+
+    await expect(page.getByText(/No account found with that email address/i)).toBeVisible();
+  });
 });
