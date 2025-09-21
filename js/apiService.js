@@ -1,6 +1,3 @@
-// Food-like image IDs from Picsum Photos
-const foodImageIds = [292, 429, 488, 614, 835, 1060, 1080, 1065, 1079, 1084];
-
 export const mockData = {
   recipes: [
     {
@@ -74,8 +71,7 @@ export const apiService = {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
         const user = mockData.users.find(
-          (u) =>
-            u.email === email.trim().toLowerCase() && u.password === password
+          (u) => u.email === email.trim().toLowerCase() && u.password === password,
         );
 
         if (user) {
@@ -103,9 +99,7 @@ export const apiService = {
   forgotPassword: ({ email }) => {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
-        const user = mockData.users.find(
-          (u) => u.email === email.trim().toLowerCase()
-        );
+        const user = mockData.users.find((u) => u.email === email.trim().toLowerCase());
 
         if (user) {
           // In a real app, this would send an email with a reset link
@@ -129,7 +123,7 @@ export const apiService = {
   },
 
   // Register function
-  register: ({ name, email, password }) => {
+  register: ({ name, email }) => {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
         const user = mockData.users.find((u) => u.email === email);
