@@ -20,7 +20,6 @@ export async function displayRecipe() {
     updateTitle(data.name);
     renderRecipe(container, data);
   } catch (error) {
-    console.log(error);
     displayMessage(container, "error", error.message);
   }
 }

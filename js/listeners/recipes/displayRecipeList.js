@@ -9,10 +9,7 @@ import { renderRecipeList } from "../../ui/recipes/renderRecipeList.js";
  * @returns {number} - Total cooking time in minutes
  */
 export function calculateTotalCookingTime(prepTimeMinutes, cookTimeMinutes) {
-  if (
-    typeof prepTimeMinutes !== "number" ||
-    typeof cookTimeMinutes !== "number"
-  ) {
+  if (typeof prepTimeMinutes !== "number" || typeof cookTimeMinutes !== "number") {
     return 0;
   }
 
@@ -26,7 +23,6 @@ export async function displayRecipeList() {
     const recipes = await apiService.getRecipes();
     renderRecipeList(container, recipes.data);
   } catch (error) {
-    console.log(error);
     displayMessage(container, "error", error.message);
   }
 }
