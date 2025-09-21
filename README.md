@@ -1,6 +1,12 @@
 # Workflow Resit 1 Repo
 
-## Goal: To learn how to use useful problem-solving tools, methods and strategies that accumulate over time.
+## Goal:
+
+- Get knowledge of the latest JavaScript productivity tools
+- Get knowledge to create meaningful tests in order to validate completed functionality
+- Know how to interact in a pull request to integrate code
+- Know how to configure productivity tools to automatically fix mistakes
+- Know how to plan and carry out meaningful unit and end-to-end tests
 
 ## Built with
 
