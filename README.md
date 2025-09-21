@@ -1,5 +1,7 @@
 # Workflow Resit 1 Repo
 
+## Goal: To learn how to use useful problem-solving tools, methods and strategies that accumulate over time.
+
 ## Built with
 
 - HTML
@@ -7,8 +9,6 @@
 - CSS
 
 - JavaScript
-
-## Goal: To learn how to use useful problem-solving tools, methods and strategies that accumulate over time.
 
 ## Tech Stack
 
@@ -26,9 +26,9 @@
 
 - Clone the repo
 
-<pre></pre>
+<pre>https://github.com/elinkrull/workflow-repo-resit-1</pre>
 
-Project Setup
+## Project Setup
 
 ## Install dependencies
 
@@ -44,7 +44,7 @@ Run Tailwind in watch mode to build CSS:
 
 Open the site in a browser by using Live Server VS Code extension
 
-Testing
+## Testing
 
 ## Unit tests (Vitest)
 
@@ -68,7 +68,7 @@ End-to-end tests (Playwright)
 
 <pre>npx playwright show-report</pre>
 
-Code Quality
+## Code Quality
 
 ## Linting
 
