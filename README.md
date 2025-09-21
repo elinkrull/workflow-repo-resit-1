@@ -24,19 +24,19 @@
 
 ## Installing
 
-## Clone the repo
+- Clone the repo
 
 <pre>https://github.com/elinkrull/workflow-repo-resit-1</pre>
 
 ## Project Setup
 
-## Install dependencies
+- Install dependencies
 
 <pre>npm install</pre>
 
 ## Development
 
-Run Tailwind in watch mode to build CSS:
+- Run Tailwind in watch mode to build CSS:
 
 <pre>npm run dev</pre>
 
@@ -48,23 +48,23 @@ Open the site in a browser by using Live Server VS Code extension
 
 ## Unit tests (Vitest)
 
-Run all unit tests:
+- Run all unit tests:
 
 <pre>npm run test</pre>
 
-End-to-end tests (Playwright)
+## End-to-end tests (Playwright)
 
 -The end-to-end tests (Playwright) need the site to be running locally before running the tests.
 
-## Run all Playwright tests:
+- Run all Playwright tests:
 
 <pre>npx playwright test</pre>
 
-## Run Playwright in UI mode (debugging):
+- Run Playwright in UI mode (debugging):
 
 <pre>npx playwright test --ui</pre>
 
-## View last Playwright HTML report:
+- View last Playwright HTML report:
 
 <pre>npx playwright show-report</pre>
 
@@ -72,13 +72,13 @@ End-to-end tests (Playwright)
 
 ## Linting
 
-Check code style:
+- Check code style:
 
 <pre>npm run lint</pre>
 
 ## Prettier & ESLint auto-fix
 
-Automatically run Prettier + ESLint on staged files before commit:
+- Automatically run Prettier + ESLint on staged files before commit:
 
 <pre>npx lint-staged</pre>
 
