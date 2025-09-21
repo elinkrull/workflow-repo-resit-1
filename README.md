@@ -24,7 +24,7 @@
 
 ## Installing
 
-- Clone the repo
+## Clone the repo
 
 <pre>https://github.com/elinkrull/workflow-repo-resit-1</pre>
 
